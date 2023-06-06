@@ -53,6 +53,7 @@ jobs:
       - name: Run tests with coverage to check for my name
         run: |
           RUN_ENV=dev
-          coverage run -m pytest python/test/
+          export AWS_REGION=your_region_value
+          coverage run -m pytest python3/test/
           coverage report
           coverage html -d cc_report/
