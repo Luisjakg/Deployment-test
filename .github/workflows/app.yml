@@ -166,7 +166,7 @@ jobs:
       - name: Finally deploy image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: /z0u5p2f3/exam-test
+          ECR_REPOSITORY: z0u5p2f3/exam-test
           IMAGE_TAG: latest
         run: |
           docker load --input /tmp/${{ env.IMAGE_TAG }}.tar
