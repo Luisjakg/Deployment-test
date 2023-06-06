@@ -54,6 +54,6 @@ jobs:
         run: |
           RUN_ENV=dev
           export AWS_REGION=your_region_value
-          coverage run -m pytest python3/test/
+          coverage run -m pytest python/test/
           coverage report
           coverage html -d cc_report/
