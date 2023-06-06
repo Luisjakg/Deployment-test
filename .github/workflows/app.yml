@@ -128,7 +128,7 @@ jobs:
           IMAGE_TAG: A01751941
         with:
           name: image
-          path: /tmp/A01751941.tar
+          path: /tmp/${{ env.IMAGE_TAG }}.tar
 
   deploy: 
     runs-on: ubuntu-latest
