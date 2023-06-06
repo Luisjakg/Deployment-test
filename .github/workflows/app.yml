@@ -169,7 +169,7 @@ jobs:
           ECR_REPOSITORY: public.ecr.aws/z0u5p2f3/exam-test
           IMAGE_TAG: latest
         run: |
-          docker load --input /tmp/$IMAGE_TAG.tar
+          docker load --input /tmp/${{ env.IMAGE_TAG }} .tar
           docker image ls -a
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
