@@ -128,7 +128,7 @@ jobs:
           IMAGE_TAG: A01751941
         with:
           name: image
-          path: /home/runner/work/exam-test/exam-test/python
+          path: /tmp/A01751941.tar
 
   deploy: 
     runs-on: ubuntu-latest
