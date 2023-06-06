@@ -121,13 +121,14 @@ jobs:
           IMAGE_TAG: A01751941
         with:
           context: ./python
+          push: true
 
       - name: Save the image
         uses: actions/upload-artifact@v2
         env:
           IMAGE_TAG: A01751941
         with:
-          name: image
+          name: ${{ env.IMAGE_TAG }}
           path: /tmp/${{ env.IMAGE_TAG }}.tar
 
   deploy: 
@@ -145,7 +146,7 @@ jobs:
         env:
           IMAGE_TAG: A01751941
         with:
-          name: image
+          name: ${{ env.IMAGE_TAG }}
           path: /tmp
         
       - name: Configure AWS Credentials
