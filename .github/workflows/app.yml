@@ -117,7 +117,7 @@ jobs:
         uses: docker/build-push-action@v2
         env: 
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: public.ecr.aws/z0u5p2f3/exam-test
+          ECR_REPOSITORY: z0u5p2f3/exam-test
           IMAGE_TAG: A01751941
         with:
           context: ./python
