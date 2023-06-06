@@ -60,6 +60,7 @@ jobs:
       - name: Run tests with coverage to check for my name
         env: 
           AWS_REGION: us-east-1
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
         run: |
           RUN_ENV=dev
           coverage run -m pytest python/test/
