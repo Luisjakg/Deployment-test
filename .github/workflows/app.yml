@@ -46,6 +46,6 @@ jobs:
       - name: Testing with coverage
         run: |
           RUN_ENV=dev
-          coverage run -m pytest python/tests
+          coverage run -m pytest python/test
           coverage report 
           coverage html -d test-reports/
