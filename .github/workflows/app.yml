@@ -23,7 +23,7 @@ jobs:
 
       - name: Build
         run: |
-          python python/app.py
+          python python/src/app.py
 
   test:
     runs-on: ubuntu-latest
