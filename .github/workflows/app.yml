@@ -51,7 +51,6 @@ jobs:
       - name: Run tests with coverage to check for my name
         env: 
           AWS_REGION: us-east-1
-
         run: |
           RUN_ENV=dev
           coverage run -m pytest python/test/
@@ -163,5 +162,3 @@ jobs:
           docker load --input /tmp/${{ env.IMAGE_TAG }}.tar
           docker image ls -a
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-
-
